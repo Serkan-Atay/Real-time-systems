@@ -1,0 +1,30 @@
+int buttonPin = 2;     // the number of the pushbutton pin
+int i;
+int buttonState = 0;         // variable for reading the pushbutton status
+
+void setup() {
+  i=0;
+  pinMode(8, INPUT);  
+  pinMode(0, OUTPUT);
+  pinMode(1, OUTPUT);
+  digitalWrite(0,HIGH);
+  digitalWrite(1,HIGH);
+
+  attachInterrupt(digitalPinToInterrupt(buttonPin), blink, FALLING);
+ 
+}
+void loop() {
+  
+  digitalWrite(i,LOW);
+  delay(200);
+  digitalWrite(i,HIGH);
+  delay(200); 
+}
+void blink() {
+  if(i==1){
+    i=0;
+  }
+  else{
+    i=1;
+  }
+}

@@ -1,0 +1,210 @@
+
+Label B-1: The result from 0 to 1 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 196379419 nsec 
+
+PID: 2266
+
+Label B-2: The result from 1 to 2 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 389122043 nsec 
+
+PID: 2266
+
+Label B-3: The result from 2 to 3 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 584038570 nsec 
+
+PID: 2266
+
+Label B-4: The result from 3 to 4 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 778609174 nsec 
+
+PID: 2266
+
+Label B-5: The result from 4 to 5 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 969503823 nsec 
+
+PID: 2266
+
+Label B-6: The result from 5 to 6 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 159029843 nsec 
+
+PID: 2266
+
+Label B-7: The result from 6 to 7 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 349147382 nsec 
+
+PID: 2266
+
+Label B-8: The result from 7 to 8 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 542625444 nsec 
+
+PID: 2266
+
+Label B-9: The result from 8 to 9 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 734519866 nsec 
+
+PID: 2266
+
+Label B-10: The result from 9 to 10 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 926111605 nsec 
+
+PID: 2266
+
+Label C-1: The result from 0 to 1 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 197800751 nsec 
+
+PID: 2267
+
+Label C-2: The result from 1 to 2 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 391864652 nsec 
+
+PID: 2267
+
+Label C-3: The result from 2 to 3 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 586919208 nsec 
+
+PID: 2267
+
+Label C-4: The result from 3 to 4 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 781769321 nsec 
+
+PID: 2267
+
+Label C-5: The result from 4 to 5 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 972994994 nsec 
+
+PID: 2267
+
+Label C-6: The result from 5 to 6 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 163671439 nsec 
+
+PID: 2267
+
+Label C-7: The result from 6 to 7 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 353288855 nsec 
+
+PID: 2267
+
+Label C-8: The result from 7 to 8 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 546759627 nsec 
+
+PID: 2267
+
+Label C-9: The result from 8 to 9 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 737411907 nsec 
+
+PID: 2267
+
+Label C-10: The result from 9 to 10 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 927991937 nsec 
+
+PID: 2267
+
+Label A-1: The result from 0 to 1 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 206517916 nsec 
+
+PID: 2265
+
+Label A-2: The result from 1 to 2 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 400678905 nsec 
+
+PID: 2265
+
+Label A-3: The result from 2 to 3 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 595974817 nsec 
+
+PID: 2265
+
+Label A-4: The result from 3 to 4 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 791908948 nsec 
+
+PID: 2265
+
+Label A-5: The result from 4 to 5 is: 
+The execution time:
+In full-seconds: 0 sec
+And in full nano-seconds: 984840344 nsec 
+
+PID: 2265
+
+Label A-6: The result from 5 to 6 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 174055868 nsec 
+
+PID: 2265
+
+Label A-7: The result from 6 to 7 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 364861163 nsec 
+
+PID: 2265
+
+Label A-8: The result from 7 to 8 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 558656926 nsec 
+
+PID: 2265
+
+Label A-9: The result from 8 to 9 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 748939989 nsec 
+
+PID: 2265
+
+Label A-10: The result from 9 to 10 is: 
+The execution time:
+In full-seconds: 1 sec
+And in full nano-seconds: 938840288 nsec 
+
+PID: 2265

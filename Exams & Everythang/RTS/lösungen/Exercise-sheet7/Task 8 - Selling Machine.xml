@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<pnml>
+<net id="Net-One" type="P/T net">
+<token id="Default" enabled="true" red="0" green="0" blue="0"/>
+<place id="Beer">
+<graphics>
+<position x="405.0" y="135.0"/>
+</graphics>
+<name>
+<value>Beer</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>250</value>
+</capacity>
+</place>
+<place id="P0">
+<graphics>
+<position x="210.0" y="105.0"/>
+</graphics>
+<name>
+<value>P0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Soft Drink">
+<graphics>
+<position x="405.0" y="45.0"/>
+</graphics>
+<name>
+<value>Soft Drink</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>100</value>
+</capacity>
+</place>
+<transition id="Insert 0.50€">
+<graphics>
+<position x="105.0" y="45.0"/>
+</graphics>
+<name>
+<value>Insert 0.50€</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Insert 1.00€">
+<graphics>
+<position x="105.0" y="135.0"/>
+</graphics>
+<name>
+<value>Insert 1.00€</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Select Beer">
+<graphics>
+<position x="315.0" y="135.0"/>
+</graphics>
+<name>
+<value>Select Beer</value>
+<graphics>
+<offset x="-11.0" y="40.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>0.0</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Select Soft Drink">
+<graphics>
+<position x="315.0" y="45.0"/>
+</graphics>
+<name>
+<value>Select Soft Drink</value>
+<graphics>
+<offset x="-4.0" y="-3.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>0.0</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<arc id="Insert 0.50€ to P0" source="Insert 0.50€" target="P0">
+<graphics/>
+<inscription>
+<value>Default,50</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="120" y="56" curvePoint="false"/>
+<arcpath id="001" x="208" y="108" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Insert 1.00€ to P0" source="Insert 1.00€" target="P0">
+<graphics/>
+<inscription>
+<value>Default,100</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="120" y="146" curvePoint="false"/>
+<arcpath id="001" x="206" y="120" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P0 to Select Beer" source="P0" target="Select Beer">
+<graphics/>
+<inscription>
+<value>Default,250</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="235" y="120" curvePoint="false"/>
+<arcpath id="001" x="320" y="146" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P0 to Select Soft Drink" source="P0" target="Select Soft Drink">
+<graphics/>
+<inscription>
+<value>Default,100</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="233" y="108" curvePoint="false"/>
+<arcpath id="001" x="320" y="56" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Select Beer to Beer" source="Select Beer" target="Beer">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="330" y="146" curvePoint="false"/>
+<arcpath id="001" x="401" y="146" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Select Soft Drink to Soft Drink" source="Select Soft Drink" target="Soft Drink">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="330" y="56" curvePoint="false"/>
+<arcpath id="001" x="401" y="56" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+</net>
+</pnml>

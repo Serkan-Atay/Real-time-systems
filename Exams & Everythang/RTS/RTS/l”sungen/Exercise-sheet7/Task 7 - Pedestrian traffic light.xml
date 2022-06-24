@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<pnml>
+<net id="Net-One" type="P/T net">
+<token id="Default" enabled="true" red="0" green="0" blue="0"/>
+<place id="Cars Green">
+<graphics>
+<position x="568.3333333333334" y="31.666666666666664"/>
+</graphics>
+<name>
+<value>Cars Green</value>
+<graphics>
+<offset x="121.66666666666659" y="21.66666666666668"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Cars Red">
+<graphics>
+<position x="268.33333333333337" y="28.33333333333335"/>
+</graphics>
+<name>
+<value>Cars Red</value>
+<graphics>
+<offset x="100.8333333333333" y="15.000000000000004"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Cars Yellow">
+<graphics>
+<position x="333.3333333333333" y="195.0"/>
+</graphics>
+<name>
+<value>Cars Yellow</value>
+<graphics>
+<offset x="128.33333333333326" y="19.999999999999996"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Cary Red-Yellow">
+<graphics>
+<position x="411.66666666666663" y="26.666666666666664"/>
+</graphics>
+<name>
+<value>Cary Red-Yellow</value>
+<graphics>
+<offset x="56.666666666666686" y="38.33333333333334"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Pedestrian Green">
+<graphics>
+<position x="105.0" y="243.33333333333331"/>
+</graphics>
+<name>
+<value>Pedestrian Green</value>
+<graphics>
+<offset x="-5.0" y="16.666666666666668"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Pedestrian Red">
+<graphics>
+<position x="105.0" y="45.0"/>
+</graphics>
+<name>
+<value>Pedestrian Red</value>
+<graphics>
+<offset x="-20.0" y="20.000000000000004"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<transition id="T0">
+<graphics>
+<position x="106.66666666666666" y="128.33333333333334"/>
+</graphics>
+<name>
+<value>T0</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T1">
+<graphics>
+<position x="291.6666666666667" y="116.66666666666666"/>
+</graphics>
+<name>
+<value>T1</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T3">
+<graphics>
+<position x="545.0" y="121.66666666666666"/>
+</graphics>
+<name>
+<value>T3</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T4">
+<graphics>
+<position x="485.00000000000006" y="28.33333333333335"/>
+</graphics>
+<name>
+<value>T4</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<arc id="Cary Red-Yellow to T4" source="Cary Red-Yellow" target="T4">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="438" y="39" curvePoint="false"/>
+<arcpath id="001" x="492" y="41" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P0 to T0" source="Pedestrian Red" target="T0">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="117" y="72" curvePoint="false"/>
+<arcpath id="001" x="120" y="126" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P2 to T1" source="Cars Red" target="T1">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="285" y="55" curvePoint="false"/>
+<arcpath id="001" x="305" y="114" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P3 to T3" source="Cars Green" target="T3">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="576" y="58" curvePoint="false"/>
+<arcpath id="001" x="558" y="119" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P5 to T0" source="Cars Yellow" target="T0">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="331" y="203" curvePoint="false"/>
+<arcpath id="001" x="123" y="146" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Pedestrian Green to T1" source="Pedestrian Green" target="T1">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="130" y="247" curvePoint="false"/>
+<arcpath id="001" x="298" y="135" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T0 to P1" source="T0" target="Pedestrian Green">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="119" y="156" curvePoint="false"/>
+<arcpath id="001" x="117" y="241" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T0 to P2" source="T0" target="Cars Red">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="124" y="136" curvePoint="false"/>
+<arcpath id="001" x="267" y="48" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T1 to P4" source="T1" target="Cary Red-Yellow">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="308" y="129" curvePoint="false"/>
+<arcpath id="001" x="412" y="48" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T1 to Pedestrian Red" source="T1" target="Pedestrian Red">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="299" y="125" curvePoint="false"/>
+<arcpath id="001" x="131" y="62" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T3 to P5" source="T3" target="Cars Yellow">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="552" y="135" curvePoint="false"/>
+<arcpath id="001" x="360" y="202" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T4 to Cars Green" source="T4" target="Cars Green">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="502" y="41" curvePoint="false"/>
+<arcpath id="001" x="566" y="43" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+</net>
+</pnml>

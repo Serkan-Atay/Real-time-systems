@@ -1,0 +1,44 @@
+// constants won't change. They're used here to set pin numbers:
+const int buttonPin = 2; 
+const int buttonPin2 = 3;// the number of the pushbutton pin
+
+// variables will change:
+int buttonState = 0;         // variable for reading the pushbutton status
+int buttonState2 = 0;
+long time1;
+long time2;
+double timeDifference;
+
+
+void setup() {
+
+  Serial.begin(9600);
+  while(!Serial);
+  Serial.println("Hello this is a reaction Test of Blerim");
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buttonPin2, INPUT_PULLUP);
+
+  
+  while (digitalRead(buttonPin)==HIGH) {}
+  time1 = micros();
+   
+  
+  while (digitalRead(buttonPin2)==HIGH){}
+      
+      time2 = micros();
+      timeDifference = ((double)time2/1000000)-((double)time1/1000000);
+      Serial.print("Time1 in Microseconds = ");
+      Serial.println(time1);
+      Serial.print("Time2 in Microseconds = ");
+      Serial.println(time2);
+      Serial.print("Difference in Microseconds = ");
+      Serial.println(time2-time1);
+      Serial.print("Difference in Seconds = ");
+      Serial.println(timeDifference,6);
+  
+}
+
+void loop() {
+
+  }
+  

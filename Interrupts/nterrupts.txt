@@ -1,0 +1,57 @@
+#define ON HIGH
+#define OFF LOW
+
+volatile byte state = LOW;
+
+void setup() {
+
+  Serial.begin(9600);
+pinMode(2, INPUT_PULLUP);
+attachInterrupt(digitalPinToInterrupt(2), switchMode, CHANGE);
+
+pinMode(5, OUTPUT);
+pinMode(6, OUTPUT);
+pinMode(7, OUTPUT);
+pinMode(8, OUTPUT);
+pinMode(9, OUTPUT);
+pinMode(10, OUTPUT);
+pinMode(11, OUTPUT);
+pinMode(12, OUTPUT);
+
+digitalWrite(5, OFF);
+digitalWrite(6, OFF);
+digitalWrite(7, OFF);
+digitalWrite(8, OFF);
+digitalWrite(9, OFF);
+digitalWrite(10, OFF);
+digitalWrite(11, OFF);
+digitalWrite(12, OFF);
+}
+
+void loop() {
+
+
+
+if(state == OFF){ 
+  digitalWrite(5, OFF);
+  digitalWrite(12, OFF);
+  for(int i = 5; i < 13; i++){
+      digitalWrite(i, ON);
+      delay(2);
+      digitalWrite(i, OFF);
+      delay(60);
+      delayMicroseconds(500);
+    }
+  }
+else{
+  digitalWrite(5, ON);
+  digitalWrite(12, ON);
+  }
+}
+
+void switchMode() {
+
+  state = !state;
+  Serial.println(state);
+  
+}

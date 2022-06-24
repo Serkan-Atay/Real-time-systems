@@ -1,0 +1,62 @@
+#include<time.h>
+#include<stdio.h>
+
+
+
+
+int complex_func ( int in)
+{
+    int tmp1 ,i;
+    float tmp2 , tmp3 ;
+    for (i =0; i < 4112; i ++)
+    {
+        tmp1 = in*in*i;
+        tmp2 = (in+i )*( in+i )*( in+i);
+        tmp3 = tmp2 / tmp1 ;
+    }
+    return tmp3 ;
+}
+
+
+int simple_func ( int in)
+{
+    int i,j=in;
+    for (i =0; i < 921; i ++) j = j+i;
+    return j;
+}
+
+
+void timespec_diff(struct timespec *start, struct timespec *stop, struct timespec *result)
+{
+    if ((stop->tv_nsec - start->tv_nsec) < 0) {
+        result->tv_sec = stop->tv_sec - start->tv_sec - 1;
+        result->tv_nsec = stop->tv_nsec - start->tv_nsec + 1000000000;
+    } else {
+        result->tv_sec = stop->tv_sec - start->tv_sec;
+        result->tv_nsec = stop->tv_nsec - start->tv_nsec;
+    }
+}
+
+
+main ( int argc , char ** argv )
+{
+    int i,j;
+    struct timespec beginTime, endTime, calculateTime;
+    clock_gettime(CLOCK_REALTIME, &beginTime);
+
+    for (i = 0; i < 350000; i ++){
+        if ((rand() % 10) >= 4){ // a) 50% = %2 b) BC = if(0) c) WC = if(1)
+            complex_func (j);
+        }
+        else{
+            simple_func (j);
+        }
+    }
+    
+     clock_gettime(CLOCK_REALTIME, &endTime);
+     
+     timespec_diff(&beginTime, &endTime, &calculateTime);
+     
+     printf("full-seconds: %ld, nano-seconds: %ld\n ", calculateTime.tv_sec, calculateTime.tv_nsec);
+
+}
